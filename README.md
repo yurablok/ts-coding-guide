@@ -406,7 +406,7 @@ const deepCopy2 = JSON.parse(JSON.stringify(someObject));
 const deepCopy3 = myCustomDeepClone(someObject);
 ```
 
-### [↑](#rus) 5.9. Перечисления (WIP)
+### [↑](#rus) 5.9. Перечисления
 
 TypeScript предоставляет возможность сделать перечисления (enumeration) разными способами,
 с разными возможностями и стоимостью.
@@ -504,16 +504,6 @@ onMount(() => {
     document.addEventListener("click", (event) => onClickPage(event));
     return () => document.removeEventListener("click", (event) => onClickPage(event));
 });
-
-// good
-function onClickPage(event: MouseEvent): void {
-    ...
-}
-onMount(() => {
-    document.addEventListener("click", onClickPage);
-    return () => document.removeEventListener("click", onClickPage);
-});
-
 
 // 4. Если занимает одну строку, не имеет ветвлений (if, switch, тернарный оператор)
 // и не содержит побочных эффектов (изменение внешнего состояния, вызов функций,
